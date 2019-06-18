@@ -128,8 +128,8 @@ nav h1 a {
   margin: 0 20px;
 }
 .filter-options select {
-  background-color: white;
-  border: 1px solid #fff;
+  background-color: #3397db;
+  border: 1px solid #000;
   font-family: Arial,sans-serif;
   font-size: 11pt;
   height: 35px;
@@ -137,6 +137,8 @@ nav h1 a {
   margin: 10px 10px 0;
   padding: 0 10px;
   width: 200px;
+  color: white;
+  border-radius: 10px;
 }
 
 /* ====================== Restaurant Listing ====================== */
@@ -161,13 +163,13 @@ nav h1 a {
   text-align: left;
   width: 28%;
   border-radius: 11px;
+  transition: 0.6s ease;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
   min-width: 100%;
   border-radius: 31px;
 }
@@ -321,3 +323,65 @@ nav h1 a {
   font-size: 1rem;
   margin: 0;
 }
+
+
+/*============ Responsivness ============*/
+@media screen and (max-width: 981px) {
+  #restaurants-list li {
+    width: 43%;
+  }
+}
+
+@media screen and (max-width: 705px) and (min-width: 600px) {
+  #restaurants-list li {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  #restaurants-list li {
+    width: 44%;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  #restaurants-list li {
+    width: 74%;
+  }
+}
+
+/*==== Mobile L ====*/
+@media screen and (max-width: 425px) {
+  #restaurants-list li {
+    width: 87%;
+  }
+
+  nav h1 a {
+    letter-spacing: 5px;
+  }
+}
+
+/*==== Mobile M ====*/
+@media screen and (max-width: 375px) {
+  #restaurants-list li {
+    width: 90%;
+  }
+}
+
+/*==== Mobile S ====*/
+@media screen and (max-width: 320px) {
+  #restaurants-list li {
+    width: 91%;
+  }
+
+  nav h1 a {
+    letter-spacing: 3px;
+  }
+}
+
+
+
+
+
+
+
