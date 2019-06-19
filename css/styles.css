@@ -256,6 +256,7 @@ nav h1 a {
 	width: 47%;
 	border-top-right-radius: 18px;
 	border-top-left-radius: 18px;
+  transition: 0.5s ease-out;
 }
 
 #restaurant-address {
@@ -276,6 +277,7 @@ nav h1 a {
   width: 47%;
   border-bottom-right-radius: 18px;
   border-bottom-left-radius: 18px;
+  transition: 0.5s ease-out;
 }
 
 #restaurant-container, #reviews-container {
@@ -355,10 +357,18 @@ nav h1 a {
 }
 
 
-/*============ Responsivness ============*/
+/*============ Responsiveness ============*/
 @media screen and (max-width: 981px) {
   #restaurants-list li {
     width: 43%;
+  }
+}
+
+/*===== Tablets =====*/
+@media screen and (max-width: 768px) {
+  #restaurant-img,
+  #restaurant-cuisine {
+    width: 80%;
   }
 }
 
@@ -389,6 +399,11 @@ nav h1 a {
   nav h1 a {
     letter-spacing: 5px;
   }
+
+  #restaurant-img,
+  #restaurant-cuisine {
+    width: 90%;
+  }
 }
 
 /*==== Mobile M ====*/
@@ -406,5 +421,22 @@ nav h1 a {
 
   nav h1 a {
     letter-spacing: 3px;
+  }
+
+  #restaurant-img,
+  #restaurant-cuisine {
+    width: 94%;
+  }
+
+  #restaurant-container {
+    padding: 0 10px 30px;
+  }
+
+  #restaurant-address {
+    margin: 10px 0 0 -32px;
+  }
+
+  #reviews-container h2 {
+    padding-left: 6px;
   }
 }
