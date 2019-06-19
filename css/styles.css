@@ -404,6 +404,10 @@ nav h1 a {
   #restaurant-cuisine {
     width: 90%;
   }
+
+  #breadcrumb {
+    padding: 13px 40px 13px 15px;
+  }
 }
 
 /*==== Mobile M ====*/
