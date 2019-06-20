@@ -1,4 +1,4 @@
-let cacheName = 'restaurant-app-reviews-v1';
+const cacheName = 'restaurant-app-reviews-v1';
 
 self.addEventListener('install', function(event) {
 
@@ -29,12 +29,17 @@ self.addEventListener('install', function(event) {
 });
 
 self.addEventListener('activate', function(event) {
+
   event.waitUntil(
+
     caches.keys().then(function(cacheNames) {
+
       return Promise.all(
         cacheNames.filter(function(cacheName) {
+
           return cacheName.startsWith('restaurant-') &&
                  cacheName != cacheName;
+
         }).map(function(cacheName) {
           return caches.delete(cacheName);
         })
@@ -43,11 +48,23 @@ self.addEventListener('activate', function(event) {
   );
 });
 
-self.addEventListener('fetch', function(event) {
+self.addEventListener('fetch', event => {
 
   event.respondWith(
-    caches.match(event.request).then(function(response) {
-      return response || fetch(event.request);
+    caches.match(event.request).then(response => {
+
+      return response ||
+      fetch(event.request)
+	  .then(res => {
+
+	 	 const response = res.clone();
+		 caches.open(cacheName)
+		 .then(cache => {
+		 	cache.put(event.request, response);
+		 });
+
+		 return res
+		 });
     })
   );
 });
