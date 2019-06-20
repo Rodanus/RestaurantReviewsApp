@@ -335,6 +335,7 @@ nav h1 a {
   text-align: center;
   border-radius: 8px;
   margin: 0 0 2px 0;
+  font-weight: normal;
 }
 
 .date {
